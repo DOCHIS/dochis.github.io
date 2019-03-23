@@ -9,6 +9,7 @@ article_header:
   background_image:
     gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
     src: /assets/attachments/2019-03-23-2019-Developer-Event-Schedule/cover.png
+comments: true
 ---
 
 개발자에게 도움이 될만한 국내 주요 교육 행사를 소개합니다.
@@ -231,7 +232,7 @@ article_header:
 
 ## AWS 교육
 AWS는 AWS 101, AWS201, AWS301등의 교육을 온라인 및 오프라인에서 진행합니다.  
-AWS에 관심이 있으신 분이라면 아래 링크를 참고해보세요!
+AWS에 관심이 있으신 분이라면 아래 링크를 참고해보세요!  
 [#AWS 행사 및 교육 소개 페이지](https://aws.amazon.com/ko/about-aws/events/)
 
 
