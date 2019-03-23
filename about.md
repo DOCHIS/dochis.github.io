@@ -18,8 +18,4 @@ titles:
 key: page-about
 ---
 
-Just say something about yourself.
-
-{% highlight javascript %}
-(() => console.log('hello, world!'))();
-{% endhighlight %}
+준비중인 페이지입니다.
