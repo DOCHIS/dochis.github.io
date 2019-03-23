@@ -35,7 +35,7 @@ comments: true
 자기개발과 기술동향에 대한 정보를 얻을 수 있는 행사정보입니다.  
 행사는 날짜기준 오름차순으로 정렬하였습니다.
 
-<table>
+<table title="교육행사 모음표">
   <thead>
     <tr>
       <th>행사로고</th>
@@ -61,7 +61,7 @@ comments: true
         * 추천대상 : 웹 프론트 개발자<br>
         * 대학(원)생만 참여가능
       </td>
-      <td><a href="http://techcon.naver.com/" title="행사 페이지로 이동" target="blank">[링크]</a></td>
+      <td><a href="http://techcon.naver.com/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
     <!-- NAVER TECK CONCERT -->
@@ -78,7 +78,7 @@ comments: true
         * 기술분야 : 스타트업/금융 및 핀테크/게임/마켓팅 등<br>
         * 추천대상 : IT분야 종사자라면 누구나
       </td>
-      <td><a href="https://aws.amazon.com/ko/events/summits/seoul/" title="행사 페이지로 이동" target="blank">[링크]</a></td>
+      <td><a href="https://aws.amazon.com/ko/events/summits/seoul/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
     <!-- AMAZON INNOVATION DAY -->
@@ -96,7 +96,7 @@ comments: true
         * 추천대상 : 서비스 관리자<br>
         * AWS SUMMIT 둘째날 같이 진행되는 행사입니다.
       </td>
-      <td><a href="https://aws.amazon.com/ko/events/summits/seoul/" title="행사 페이지로 이동" target="blank">[링크]</a></td>
+      <td><a href="https://aws.amazon.com/ko/events/summits/seoul/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
     <!-- NEXON DEVELOPERS CONFERENCE -->
@@ -113,7 +113,7 @@ comments: true
         * 기술분야 : 서버/DB/웹/모바일/법령/개발자인생 등<br>
         * 추천대상 : IT분야 종사자라면 누구나
       </td>
-      <td><a href="https://ndc.nexon.com/main" title="행사 페이지로 이동" target="blank">[링크]</a></td>
+      <td><a href="https://ndc.nexon.com/main" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
     <!-- Upbit Developer Conference 2019 -->
@@ -130,7 +130,7 @@ comments: true
         * 기술분야 : 블록체인 기술에 대한 토론 및 지식 공유<br>
         * 추천대상 : 블록체인 개발자
       </td>
-      <td><a href="https://deview.kr/" title="행사 페이지로 이동" target="blank">[링크]</a></td>
+      <td><a href="https://deview.kr/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
     <!-- DEVIEW 2019 -->
@@ -147,7 +147,7 @@ comments: true
         * 기술분야 : AI/웹/보안/블록체인/서버/모바일 등<br>
         * 추천대상 : 개발자/PM 등
       </td>
-      <td><a href="https://deview.kr/" title="행사 페이지로 이동" target="blank">[링크]</a></td>
+      <td><a href="https://deview.kr/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
     <!-- IF(kakao)DEV 2019 -->
@@ -165,7 +165,7 @@ comments: true
         * 추천대상 : 디자이너/AI개발자/PM 등<br>
         * 작년이 1회였는데 올해도 할지는 모르겠습니다.
       </td>
-      <td><a href="https://if.kakao.com/" title="행사 페이지로 이동" target="blank">[링크]</a></td>
+      <td><a href="https://if.kakao.com/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
     <!-- OKKYCON: 2019 -->
@@ -183,7 +183,7 @@ comments: true
         * 추천대상 : 디자이너/개발자/PM 등<br>
         * 매회차마다 주제가 매우 다릅니다.
       </td>
-      <td><a href="http://okkycon.com/" title="행사 페이지로 이동" target="blank">[링크]</a></td>
+      <td><a href="http://okkycon.com/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
     <!-- NHN FORWARD -->
@@ -201,7 +201,7 @@ comments: true
         * 추천대상 : IT분야 종사자라면 누구나<br>
         * 작년 1회차를 진행했으나, 외부에 공개되지 않았습니다. 올해부터 외부에 공개 예정이라고 합니다.
       </td>
-      <td><a href="http://forward.nhnent.com" title="행사 페이지로 이동" target="blank">[링크]</a></td>
+      <td><a href="http://forward.nhnent.com" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
   </tbody>
