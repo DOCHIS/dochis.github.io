@@ -172,7 +172,7 @@ analytics:
 
   ## Google Analytics
   google:
-    tracking_id : UA-50628520-2
+    tracking_id : UA-47772768-2
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
