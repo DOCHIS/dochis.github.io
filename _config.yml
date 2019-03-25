@@ -20,7 +20,7 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : http://dochis.github.io
 baseurl : /
-title   : 도치즈의 무생각한 기술블로그
+title   : 도테크(DOTeck) Blog
 description: > # this means to ignore newlines until "Language & timezone"
   아직까지 갈피를 잡지 못한 무생각한 블로그입니다.
 
