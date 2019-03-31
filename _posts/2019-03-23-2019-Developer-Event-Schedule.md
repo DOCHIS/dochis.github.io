@@ -96,7 +96,7 @@ comments: true
         * 추천대상 : 서비스 관리자<br>
         * AWS SUMMIT 둘째날 같이 진행되는 행사입니다.
       </td>
-      <td><a href="https://aws.amazon.com/ko/events/summits/seoul/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
+      <td><a href="https://aws.amazon.com/ko/events/aws-innovate/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
     <!-- NEXON DEVELOPERS CONFERENCE -->
@@ -130,7 +130,7 @@ comments: true
         * 기술분야 : 블록체인 기술에 대한 토론 및 지식 공유<br>
         * 추천대상 : 블록체인 개발자
       </td>
-      <td><a href="https://deview.kr/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
+      <td><a href="https://udc.upbit.com/" title="행사 페이지로 이동" target="_blank">[링크]</a></td>
     </tr>
 
     <!-- DEVIEW 2019 -->
@@ -218,7 +218,7 @@ comments: true
 
 ## 해외행사
 주로 해외에서 진행되기 때문에 참여는 못 하지만,  
-발표자료가 자주 올라오고 매우 유익하므로 참고하면 좋은 행사를 소개합니다. 
+발표자료가 자주 올라오고 매우 유익하므로 참고하면 좋은 행사를 소개합니다.
 
 * GOOGLE I/O ([https://events.google.com/io/](https://events.google.com/io/))  
 구글에서 진행하는 컨퍼런스입니다.  
