@@ -34,7 +34,7 @@ timezone: Asia/Seoul
 ##############################
 author:
   type      : person
-  name      : 박성준
+  name      : dochis
   url       : dochis.net
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
