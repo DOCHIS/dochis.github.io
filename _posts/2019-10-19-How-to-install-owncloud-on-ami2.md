@@ -227,7 +227,7 @@ exit;
     - 데이터베이스 이름 : owncloud
     - 데이터베이스 호스트 : localhost
 - 위 정보 입력 후 '설치 완료'를 클릭하면 잠시 후 설치가 완료됩니다.
-![owncloud_first_page](/assets/attachments/2019-10-19-How-to-install-owncloud-on-ami2/owncloud_first_page.png)
+![owncloud_first_page](/assets/attachments/2019-10-19-How-to-install-owncloud-on-ami2/owncloud_first_page.png?c=191020)
 
 설치완료 후 로그인화면
 ![owncloud_login.png](/assets/attachments/2019-10-19-How-to-install-owncloud-on-ami2/owncloud_login.png)
