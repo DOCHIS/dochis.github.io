@@ -13,7 +13,7 @@ comments: true
 ---
 
 
-회사에서 파일 공유를 위해 클라우드를 필요로 하게 되었는데, 가격도 비싸고 첨부 용량에 제한이 있어 고민을 하게 되었다.
+회사에서 파일 공유를 위해 클라우드가 필요하게 되었는데, 기존 상용 스토리지를 찾아보니 가격도 비싸고 첨부 용량에 제한이 있거나 속도가 느리다는 점 등의 문제점이 있어 고민하게 되었다.
 때문에 **무료**로 사용할 수 있는 클라우드 저장소 소프트웨어를 찾아보게 되었고,
 이번 글에서는 AWS에서 제공하는 **Amazon Linux 2 AMI 환경**에서 **ownCloud를 설치하는 방법**에 대해 소개해보려고 한다.
 ![oneCloud-snapshot](/assets/attachments/2019-10-19-How-to-install-owncloud-on-ami2/owncloud_snapshot.png)
@@ -38,10 +38,19 @@ comments: true
 
 # 구축환경
 - OS : Amazon Linux 2 AMI (HVM), SSD Volume Type
+- 인스턴스 타입 : t3.nano (2Core / 0.5GB Memory)
+- 스토리지 용량 : 20GB (Elastic Block Store, gp2)
 - nginx : 1.12.2 / php 7.2.22
 - db : mariaDB 10.4.8
 - ownCloud : 10.3 (Production)
 
+## 구축시 예상 사용비용
+- ownCloud : 무료
+- 인스턴스 비용 : 약 4,600원
+- 스토리지 비용 : 약 2,400원
+- 통신구간 비용 : 약 3,000원 (Outbound Data Transfer 10GB 기준)
+- 합계 : 월 약 1만원
+- 주) 위 사양으로 구축 시 어느 정도의 퍼포먼스가 나오는지는 [성능측정결과 게시물](/2019/10/20/owncloud-performance-test-on-ami2.html){:target="_blank"} 참고.
 
 * * *
 
@@ -85,22 +94,18 @@ sudo vi /etc/php.ini
 ~~~~
 date.timezone = Asia/Seoul
 ~~~~
+
 (선택사항) 첨부파일 용량을 변경하려면 다음 설정도 같이 변경할 것.
-- upload_max_filesize : 파일 하나당 최대 용량 (기본:2MB)
-- post_max_size : 1회 전송 최대용량 (기본 :8MB)
-- max_execution_time : php의 최대 실행시간 (기본 :30초)
-- max_input_time : 데이터를 입력받는 최대시간 (기본 :60초)
-- memory_limit : 최대 메모리 용량 (기본 :128MB)
-
-** post_max_size > upload_max_filesize >= memory_limit 이 성립해야 파일업로드가 실패되지않음 **
-
-~~~~
-upload_max_filesize = 2M
-post_max_size = 8M
-max_execution_time = 30
-max_input_time = 60
-memory_limit = 128M
-~~~~
+- sudo vi /etc/php.ini 수정사항
+    - upload_max_filesize : 파일 하나당 최대 용량 (기본:2MB)
+    - post_max_size : 1회 전송 최대용량 (기본 :8MB)
+    - max_execution_time : php의 최대 실행시간 (기본 :30초)
+    - max_input_time : 데이터를 입력받는 최대시간 (기본 :60초)
+    - memory_limit : 최대 메모리 용량 (기본 :128MB)
+- sudo vi /etc/nginx/nginx.conf 추가사항
+    - client_max_body_size ???M; 추가
+- 수정 후 sudo systemctl restart nginx; sudo systemctl restart php-fpm; 명령어로 재시작 해야 적용됨.
+- client_max_body_size = post_max_size > upload_max_filesize >= memory_limit 이 성립해야 파일업로드가 실패되지않음
 
 설정 적용을 위한 php-fpm 재시작
 ~~~~
@@ -213,7 +218,15 @@ exit;
 
 
 ## Step. 7 : ownCloud Install
-브라우저를 통해 해당 서버의 아이피로 접속 후 사용자 이름 및 암호 입력 후 설치완료를 클릭하면 설치가 완료됩니다.
+브라우저를 통해 해당 서버의 아이피로 접속 후 설정을 마무리합니다.
+- 관리자 계정 : 사용하고자 하는 아이디와 비밀번호를 입력합니다.
+- 저장소 및 데이터베이스 :
+    - 데이터베이스 설정 : MySQL / MariaDB
+    - 데이터베이스 사용자 : root
+    - 데이터베이스 암호 : <MySQL 설치시 설정한 암호>
+    - 데이터베이스 이름 : owncloud
+    - 데이터베이스 호스트 : localhost
+- 위 정보 입력 후 '설치 완료'를 클릭하면 잠시 후 설치가 완료됩니다.
 ![owncloud_first_page](/assets/attachments/2019-10-19-How-to-install-owncloud-on-ami2/owncloud_first_page.png)
 
 설치완료 후 로그인화면
@@ -229,7 +242,7 @@ exit;
 # (중요) 맺음말 및 주의사항
 현재 이 가이드만 따라 할 경우 SSL 보안인증서와 서버측 파일보호가 되지 않은 상태로 완료됩니다.  
 SSL 보안 인증서가 없다면, 파일이 네트워크 통신구간에서 감청 되는 등의 보안 위험이 있을 수 있으며,
-서버측 파일보호가 켜져있지 않다면, 만약있을 수 있는 서버의 해킹 등의 공격시 파일을 보호할 수 없습니다.
+서버측 파일보호가 켜져있지 않다면, 만약 있을 수 있는 서버의 해킹 등의 공격 시 파일을 보호할 수 없습니다.
 
 ## 서버측 보호 사용
 로그인 후 화면에서 오른쪽 아이디 클릭 > 설정 접속
