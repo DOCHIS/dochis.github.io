@@ -222,3 +222,5 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  - jekyll-sitemap
+  - jekyll-feed
