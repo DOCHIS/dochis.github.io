@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 스타트업을 위한 초기 서버선택 가이드
+title: 초기 스타트업을 위한 서버선택 가이드
 tags: AWS 서버 스타트업 SA
 article_header:
   type: overlay
@@ -31,7 +31,7 @@ comments: true
 - 아래 내용은 필자의 개인 의견입니다.
 - 사실 클라우드 서비스는 싸지 않습니다.
   - 사용량에 따라 과금되지만 사용량에 따른 비용이 기존 전통적인 방식에 비해 비쌉니다.
-  - 클라우드가 기존 방식보다 싸려면 관리비용을 최소화하고 서버구성을 최적화를 해야합니다.
+  - 클라우드가 기존 방식보다 싸려면 관리비용을 최소화하고 사용량을 낮추기 위해 구성을 최대한 최적화를 해야합니다.
 - 이러한 과정에서 많은 인력이 필요하기 때문에 초기스타트업에게 적합하지 않습니다.
 - 서비스가 성장하고 있을 때 클라우드의 도입을 검토해볼 수 있습니다. 빠르게 성장하는 속도에 따라 발생되는 방대한 량의 트레픽을 유동적으로 처리하기 위해서는 사실 클라우드 이외에는 방법이 없습니다.
 
@@ -167,6 +167,18 @@ comments: true
 - 오류나 수정되어야 할 사항이 있다면 언제든지 피드백 부탁드립니다.
 
 
+* * *
+
+## 참조링크
+- ['천만 사용자를 위한 AWS 클라우드 아키텍쳐'](https://www.slideshare.net/awskorea/aws-cloud-architecture-evolution-for-one-thousand-users-changsu-lee){:target="_blank"}
+- ['Cafe24 호스팅 요금 (PHP)'](https://www.cafe24.com/?controller=product_page&type=basic&page=autoban){:target="_blank"}
+- ['Cafe24 호스팅 요금 (JSP)'](https://www.cafe24.com/?controller=product_page&type=special&page=tomcat){:target="_blank"}
+- ['Cafe24 호스팅 요금 (Node.js)'](https://www.cafe24.com/?controller=product_page&type=special&page=nodejs){:target="_blank"}
+- ['Amazon EC2 요금'](https://aws.amazon.com/ko/ec2/pricing/){:target="_blank"}
+- ['Amazon RDS 요금'](https://aws.amazon.com/ko/rds/pricing/){:target="_blank"}
+- ['Elastic Load Balancing 요금'](https://aws.amazon.com/ko/elasticloadbalancing/pricing/){:target="_blank"}
+- ['AWS 총 소유 비용(TCO) 계산기'](https://aws.amazon.com/ko/tco-calculator/){:target="_blank"}
+- ['AWS 프리티어 소개페이지'](https://aws.amazon.com/ko/free/){:target="_blank"}
 
 
 
