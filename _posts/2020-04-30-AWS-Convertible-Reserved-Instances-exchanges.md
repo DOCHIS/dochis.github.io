@@ -1,6 +1,8 @@
 ---
 layout: article
 title: AWS 컨버터블 예약인스턴스 구매 시 참고하면 좋을 점
+description: "AWS의 많은 사용자분들께서 인스턴스의 타입을 추후 변경하는것을 고려하여 할인폭이 낮더라도 컨버터블을 많이 선택하실 텐데요 이러한 RI 구매시 참고하면 좋을점을 정리해보았습니다."
+image: "/assets/attachments/2020-04-30-AWS-Convertible-Reserved-Instances-exchanges/cover.png"
 tags: AWS
 article_header:
   type: overlay

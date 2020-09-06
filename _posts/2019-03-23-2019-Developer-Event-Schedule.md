@@ -1,6 +1,8 @@
 ---
 layout: article
 title: 내맘대로 정리하는 2019년 개발자 행사
+description: "개발자에게 도움이 될만한 국내 주요 교육 행사를 소개합니다."
+image: "/assets/attachments/2019-03-23-2019-Developer-Event-Schedule/cover.png"
 tags: 행사일정
 article_header:
   type: overlay

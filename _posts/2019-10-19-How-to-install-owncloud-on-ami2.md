@@ -1,6 +1,8 @@
 ---
 layout: article
 title: (AWS) 나만의 파일 저장소 ownCloud 설치하기
+description: "사내 파일 공유를 위한 간편한 스토리지 저장소 자체구축"
+image: "/assets/attachments/2019-10-19-How-to-install-owncloud-on-ami2/cover.png"
 tags: AWS
 article_header:
   type: overlay

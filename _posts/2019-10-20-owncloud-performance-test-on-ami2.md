@@ -1,6 +1,8 @@
 ---
 layout: article
 title: (AWS) owncloud 성능 테스트 결과 (ami2)
+description: "이 게시물은 (AWS) 나만의 파일 저장소 ownCloud 설치하기를 통해 설치한 ownCloud의 성능을 테스트한 결과입니다."
+image: "/assets/attachments/2019-10-19-How-to-install-owncloud-on-ami2/cover.png"
 tags: AWS
 article_header:
   type: overlay

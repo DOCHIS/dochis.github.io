@@ -1,6 +1,8 @@
 ---
 layout: article
 title: 초기 스타트업을 위한 서버선택 가이드
+description: "스타트업을 하다보니 주변 초기 스타트업으로 부터 초기 서버 구축에 대한 질문을 많이 받습니다. 그 중 대표적인 질문이 '클라우드 도입이 필수인가?', '클라우드 비용은 얼마나 나오는가?' 입니다. 오늘은 이 주제에 대해 제 경험을 바탕으로 이용자수를 기준으로 풀어보고자합니다."
+image: "/assets/attachments/2020-08-19-Server-Architecture-for-Startups/cover.png"
 tags: AWS 서버 스타트업 SA
 article_header:
   type: overlay
