@@ -172,15 +172,15 @@ comments: true
 * * *
 
 ## 참조링크
-- ['천만 사용자를 위한 AWS 클라우드 아키텍쳐'](https://www.slideshare.net/awskorea/aws-cloud-architecture-evolution-for-one-thousand-users-changsu-lee){:target="_blank"}
-- ['Cafe24 호스팅 요금 (PHP)'](https://www.cafe24.com/?controller=product_page&type=basic&page=autoban){:target="_blank"}
-- ['Cafe24 호스팅 요금 (JSP)'](https://www.cafe24.com/?controller=product_page&type=special&page=tomcat){:target="_blank"}
-- ['Cafe24 호스팅 요금 (Node.js)'](https://www.cafe24.com/?controller=product_page&type=special&page=nodejs){:target="_blank"}
-- ['Amazon EC2 요금'](https://aws.amazon.com/ko/ec2/pricing/){:target="_blank"}
-- ['Amazon RDS 요금'](https://aws.amazon.com/ko/rds/pricing/){:target="_blank"}
-- ['Elastic Load Balancing 요금'](https://aws.amazon.com/ko/elasticloadbalancing/pricing/){:target="_blank"}
-- ['AWS 총 소유 비용(TCO) 계산기'](https://aws.amazon.com/ko/tco-calculator/){:target="_blank"}
-- ['AWS 프리티어 소개페이지'](https://aws.amazon.com/ko/free/){:target="_blank"}
+- [천만 사용자를 위한 AWS 클라우드 아키텍쳐](https://www.slideshare.net/awskorea/aws-cloud-architecture-evolution-for-one-thousand-users-changsu-lee){:target="_blank"}
+- [Cafe24 호스팅 요금 (PHP)](https://www.cafe24.com/?controller=product_page&type=basic&page=autoban){:target="_blank"}
+- [Cafe24 호스팅 요금 (JSP)](https://www.cafe24.com/?controller=product_page&type=special&page=tomcat){:target="_blank"}
+- [Cafe24 호스팅 요금 (Node.js)](https://www.cafe24.com/?controller=product_page&type=special&page=nodejs){:target="_blank"}
+- [Amazon EC2 요금](https://aws.amazon.com/ko/ec2/pricing/){:target="_blank"}
+- [Amazon RDS 요금](https://aws.amazon.com/ko/rds/pricing/){:target="_blank"}
+- [Elastic Load Balancing 요금](https://aws.amazon.com/ko/elasticloadbalancing/pricing/){:target="_blank"}
+- [AWS 총 소유 비용(TCO) 계산기](https://aws.amazon.com/ko/tco-calculator/){:target="_blank"}
+- [AWS 프리티어 소개페이지](https://aws.amazon.com/ko/free/){:target="_blank"}
 
 
 
