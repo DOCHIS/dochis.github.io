@@ -3,7 +3,7 @@ layout: article
 title: 무료로 서비스를 모니터링하는 3가지 방법
 description: "서비스에 장애가 발생되는 원인은 참 다양합니다. 때문에 우리는 장애를 대비하고자 다양한 모니터링 도구를 사용합니다."
 image: "/assets/attachments/2020-09-06-Ways-to-Monitor-Service-for-Free/og-bg.png"
-tags: AWS 서버 모니터링 스타트업
+tags: 서버 모니터링 스타트업
 article_header:
   type: overlay
   theme: dark
