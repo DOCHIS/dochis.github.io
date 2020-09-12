@@ -14,6 +14,9 @@ article_header:
 comments: true
 ---
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fvelog.io%2F%40dochis%2F%25EC%259B%25B9-%25ED%2594%2584%25EB%25A1%25A0%25ED%258A%25B8-%25EC%2586%258D%25EB%258F%2584-%25EA%25B0%259C%25EC%2584%25A0%25EC%259D%2584-%25EC%259C%2584%25ED%2595%259C-%25ED%2595%2584%25EC%2588%2598%25EB%258F%2584%25EA%25B5%25AC-%25EC%2586%258C%25EA%25B0%259C&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
+
 # 😒 왜 우리사이트는 느린가
 사이트가 느려지는 원인은 다음과 같이 매우 다양합니다.
 (참고로 필자는 back-end개발자입니다, 분란의 오해없으시길 바랍니다.)
