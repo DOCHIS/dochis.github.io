@@ -15,10 +15,6 @@ comments: true
 ---
 
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=blog.dochis.net/2020-09-06-Ways-to-Monitor-Service-for-Free.html.svg)](https://hits.seeyoufarm.com)
-
-
-
 # 개요
 서비스에 장애가 발생되는 원인은 참 다양합니다. 때문에 우리는 장애를 대비하고자 다양한 모니터링 도구를 사용합니다.
 오늘은 무료로 사용가능한 도구들을 조합하여 최대한 자세히 서비스를 모니터링하는 방법을 알아보겠습니다.

@@ -1,0 +1,13 @@
+{%- if page.hists -%}
+<div style="text-align: center; margin-top:15px">
+  <a href="https://hits.seeyoufarm.com/" target="_blank">
+    <img src="{{page.hists}}" />
+  </a>
+</div> 
+{%- else -%}
+<div style="text-align: center; margin-top:15px">
+  <a href="https://hits.seeyoufarm.com/" target="_blank">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ site.url | remove_first: 'https://' | remove_first: 'http://' }}/{{ page.url | remove_first: '/' | replace: '/', '-' }}.svg" />
+  </a>
+</div> 
+{%- endif -%}
