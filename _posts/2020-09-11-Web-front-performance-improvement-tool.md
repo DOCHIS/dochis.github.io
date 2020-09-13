@@ -39,7 +39,7 @@ hists: https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fve
 필자의 경우 2.7초를 초과 할 경우 느리다고 생각하고 있습니다.
 많은 보고서에서 로딩이 3초를 초과할 경우
 50% 정도의 사용자는 사이트를 이탈한다고 말합니다.!
-<a href="http://asq.kr/azlSZD8khUrZ" target="_blank"><br>그 보고서! 자세히 보고싶어요! (akamai 보고서)</a>
+<a href="http://asq.kr/azlSZD8khUrZ" target="_blank"><br>그 보고서 자세히 보고싶어요! (akamai 보고서)</a>
 
 # 😶 오늘 사용할 도구
 오늘 소개할 도구는 JENNIFERSOFT사의 JENNIFER Front입니다.
@@ -50,12 +50,11 @@ hists: https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fve
 > JENNIFERSOFT사 소속의 Irene님께서
 '유료 계획은 현재까지는 없습니다~' 라고 답변해주셨습니다.
 
-![JENNIFER Front 대시보드](https://images.velog.io/images/dochis/post/ba4f6993-baa2-41f6-8fea-795474b09bef/image.png)
+![JENNIFER Front 대시보드](https://images.velog.io/images/dochis/post/4e1bba42-3e74-48b0-b058-0f0e6af08869/dashboard.gif)
 
 
 # 😏 와 저 오른쪽 그레프 이쁘다
-![JENNIFER Front X-View](https://images.velog.io/images/dochis/post/11d5d2e3-bcfa-4a58-8dd9-b4986ea9dfc9/image.png)
-
+![JENNIFER Front X-View](https://images.velog.io/images/dochis/post/405c6a0b-314f-4e8c-b093-6b504a7e5fcb/image.gif)
 ~~손님! 안목이 있으시군요!~~. JENNIFER의 핵심인 x-view 화면입니다.
 그런데 세로축이 페이지 로딩에 소요 된 시간입니다.
 윗쪽을 보시면 5초이상의 노란색~빨간색 표시가 보이시죠??
@@ -122,7 +121,7 @@ JENNIFER Front에서 사용하는 추적옵션은 다음과 같은 6종류입니
 
 JENNIFER Front의 Resource 분석에서는, 각 정적콘텐츠가 지역별로 로딩에 어느정도 소요되었는지 볼 수 있습니다.
 
-![Resource 분석 페이지](https://images.velog.io/images/dochis/post/7fa296bd-1e59-4e1c-bc3b-4af6d0f03a5d/image.png)
+![Resource 분석 페이지](https://images.velog.io/images/dochis/post/b40ae23e-8f2a-4e7d-9cb5-6dd391c2b830/image.gif)
 
 위 처럼 CDN을 사용하더라도 일부 구간에서 로딩이 느릴 수 있습니다.
 🏃‍♀️앗! 팀장님~~!! 우리 CDN 서비스 바꿔요!!!
