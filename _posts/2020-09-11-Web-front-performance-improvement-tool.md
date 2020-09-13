@@ -30,14 +30,22 @@ hists: https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fve
 - 정적콘텐츠(이미지/js/css 등)의 전송속도 
 - 너무 무거운 스크립트
 - 너무 무거운 이미지
+- 뜻하지 않은 버그로 인한 무한루프
 - ~~등등 2,147,483,644가지 경우~~
 
+* * *
+
+> ** Tip. 느림의 기준? **
+필자의 경우 2.7초를 초과 할 경우 느리다고 생각하고 있습니다.
+많은 보고서에서 로딩이 3초를 초과할 경우
+50% 정도의 사용자는 사이트를 이탈한다고 말합니다.!
+<a href="http://asq.kr/azlSZD8khUrZ" target="_blank"><br>그 보고서! 자세히 보고싶어요! (akamai 보고서)</a>
 
 # 😶 오늘 사용할 도구
 오늘 소개할 도구는 JENNIFERSOFT사의 JENNIFER Front입니다.
 현재 구글 계정만있다면 **무료**로 사용하실 수 있습니다.
 
-[JENNIFER Front 바로가기](https://front.jennifersoft.com/)
+<a href="http://asq.kr/zso40e7v2kYo" title="JENNIFER Front 바로가기" alt="JENNIFER Front 바로가기" taget="_blank">JENNIFER Front 바로가기</a>
 
 > JENNIFERSOFT사 소속의 Irene님께서
 '유료 계획은 현재까지는 없습니다~' 라고 답변해주셨습니다.
@@ -55,8 +63,7 @@ hists: https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fve
 그 의미는 사이트가 굉장히 느리다는겁니다.
 다시 그레프를 보시면, 이쁘시지만은 않을꺼에요.
 
-JENNIFER에서는 5초 미만의 페이지의 경우 초록색,
-5초~10초 구간은 노란색, 10초 이상은 빨간색으로 표시하고 있습니다.
+JENNIFER에서는 5초 미만의 페이지의 경우 초록색, 5초~10초 구간은 노란색, 10초 이상은 빨간색으로 표시하고 있습니다.
 
 
 # 🙄 왜 느릴까?
@@ -69,17 +76,17 @@ x-view 화면에서 원하시는 영역을 드레그 하시면 페이지가 느�
 ![x-view 상세보기 화면](https://images.velog.io/images/dochis/post/749e3e43-c357-4ca9-9d6f-f5a26cafdff3/image.png)
 
 JENNIFER Front에서 사용하는 추적옵션은 다음과 같은 6종류입니다.
-- 대기 :
+- 대기 : 
 	http request 시작 후 Server에서 데이터를 보내기 까지 대기시간
-- Server :
+- Server : 
 	Server에서 데이터를 보내는 시간
-- Network :
+- Network : 
 	http request 시작 후 response을 받는 시점까지
-- Dom :
+- Dom : 
 	response에서 Dom을 로드 하는 시간
-- Render :
+- Render : 
 	Dom을 로드 하고 css/js  등을 통해 페이지를 렌더링 하는 시간
-- 로드 :
+- 로드 : 
 	렌더링 이후 로드에 소요 된 시간
     
     
@@ -93,23 +100,25 @@ JENNIFER Front에서 사용하는 추적옵션은 다음과 같은 6종류입니
 ## 🤩 어떻게 분석하나요?
 가장 많이 발생되는 지연구간 별 원인은 다음과 같습니다.
 
-### < Server/Network 구간 >
+### 1. Server/Network 구간
 - 이 두 구간은 브라우저가 html을 받기 까지의 구간입니다. Network 시간 - Server 시간을 한다면 순수 전송에 소요 된 시간을 알 수 있습니다. 순수 전송에 소요 된 시간이 적다면 Server의 문제로 보입니다. html를 반환하는 과정에서 오래 소요되는 구간을 찾을 필요가 있습니다.
-- 순수 전송 소요시간이 길다면, Network 구성에 문제가 있을 수 있습니다. CDN 서비스를 통해 속도를 줄이거나 할 필요가 있습니다.
+- 순수 전송 소요시간이 길다면, Network 구성에 문제가 있을 수 있습니다. CDN 서비스를 사용하거나 캐싱처리해 최적화 할 필요가 있습니다.
 
-### < Dom/Render 구간 >
+### 2. Dom/Render 구간
 - 이 두 구간은 브라우저가 html을 받고 Dom을 처리하거나 Rendering 하는 과정의 이슈 구간입니다.
 - Dom 구간이 느리다면 Dom이 너무 중첩되거나 무겁지 않은지 확인이 필요합니다.
-- Render 구간이 느리다면 Font/Javasciprt의 Network 전송 이슈는 없었는지 확인합니다. 있었다면 Network 구간의 정비가 필요합니다. 없었다면 원인이 Javasciprt로 인한것인지 다른 기타요인으로 인한것인지 확인이 필요합니다.
+- Render 구간이 느리다면 Font/Javasciprt/Css등 랜더링 지연 파일들의 Network 전송 이슈는 없었는지 확인합니다. 있었다면 Network 구간의 정비가 필요합니다. 없었다면 원인이 Javasciprt로 인한것인지 다른 기타요인으로 인한것인지 확인이 필요합니다.
 - 타임라인을 내려보면, 파일별로 Rendering을 볼 수 있어, 개별적으로 확인 후 분석이 필요합니다.
 
+
+## 😓 어렵죠..? 예시로 설명함돠!
 
 ### 🙋‍ CDN을 쓰는데 Network 구간이 느려요 
 
 정적콘텐츠(Javascript/이미지/CSS/Font 등)의 전송을 빠르게 하고자 CDN(Contents Delivery Network)를 많이 활용하실 텐데요, CDN을 너무 맹신하시면 안됩니다.
 
 우리는 CDN을 쓰니까 모든 지역에서 빠르겠지?! 는 오해일 수 있습니다.
-지역에 따라 느린 전송이 서비스가 종종 있기 때문이죠!
+지역에 따라 전송이 느린 서비스가 종종 있기 때문이죠!
 
 JENNIFER Front의 Resource 분석에서는, 각 정적콘텐츠가 지역별로 로딩에 어느정도 소요되었는지 볼 수 있습니다.
 
@@ -122,6 +131,8 @@ JENNIFER Front의 Resource 분석에서는, 각 정적콘텐츠가 지역별로 
 ### 🙋‍♂️ SPA 서비스에서 Ajax로 통신을 하고있어요
 
 SPA(Single Page Application)를 사용하는 경우, html과 Javascript를 먼저 반환하고 데이터는 Ajax를 통해 불러오는 경우가 많은데요!
+
+Ajax에서 데이터 받는 시간이 길어져 사용자의 입장에서 렌더링이 느리게 느껴질 수 있답니다.!
 
 아래와 같이 Ajax 통신만 담당하는 담당 일찐 페이지가 따로있어요!
 시간에 따른 호출수/지연시간/Error 발생 비율 등을 볼 수 있습니다.
@@ -136,12 +147,12 @@ SPA(Single Page Application)를 사용하는 경우, html과 Javascript를 먼�
 서울특별시에서 평균 4.9초의 응답속도를 보이는것으로 확인되는데요,
 이런듯 공신력 있는 CDN 서비스에서 배포하는 파일이라도 방심은 할 수 없습니다!
 
-서비스 로딩에 지연을 주는 중요한 파일이라면 꼭! 자체 CDN을 구축하거나 안정적인 서비스인지 확인하세요!
+서비스 로딩에 지연을 주는 중요한 파일이라면 꼭! 안정적인 CDN서비스를 통해 배포해야합니다!
 
 ![cdn 분석](https://images.velog.io/images/dochis/post/16408823-f9b9-4438-93c0-6648739a90f5/image.png)
 
 
-### 🙋‍♂️ 이미지용 서버를 따로 쓰고 있어요!
+### 🙋‍♂️ 우리는 이미지용 서버를 따로 쓰고 있어요!
 혹시 해당 서버에서 배포하는 정적 파일들은 안전하게 호스팅 되고 있을까요?!
 
 JENNIFER Front에서는 아래 사진과 같이 정적 컨텐츠들을 url 규칙에 맞게 자동으로 그룹화하여 url 그룹 별 통계를 제공합니다.
@@ -150,33 +161,61 @@ JENNIFER Front에서는 아래 사진과 같이 정적 컨텐츠들을 url 규�
 
 0.54초가 짧게 보일 수 있지만, 게시물을 예로 들면 한 게시물 내에 수십개의 이미지가 첨부 될 수 있기 때문에 짧지만은 않은 지연시간입니다.!
 
+> 😱 이미지 서버 뿐 아니에요!
+우리가 자주사용하는 파일용서버/스트리밍용 서버 등에서도
+비슷한 경우가 자주 발생한답니다!
+각 url 그룹별로 지연원인은 없는지 자주 분석하는게 좋아요!
+
 ![리소스 그룹](https://images.velog.io/images/dochis/post/3c9236c0-052d-41b3-a784-9ddd917b885c/image.png)
 
 
-### 🙋‍ 또 다른기능은 없나요?
+## 😳 뜻밖의 꿀팁!
 
 Javascript Error 분석기능도 있습니다.!
 Javascript Error가 발생할 경우 수집하여 브라우저 정보 등과 함께 제공합니다.!
 
-디버깅할 때 정말 편하겠죠!?
+> 😥 왜, 한번씩 그런경우 있잖아요!
+특정 사용자한테만 나타나는 스크립트 에러말이에요! 
+이러한 경우에도 console 상에 에러가 발생되면 자동으로 수집된답니다.!
 
 ![JS Error 분석](https://images.velog.io/images/dochis/post/054b17b5-9d7e-43eb-9949-02d3675633d3/image.png)
 
 그 이외에도 브라우저 통계, 사용자별 통계, 리소스 그룹별 통계 등 다양한 기능이 있습니다.
 
+> 사용자별 통계 기능은 해당 사용자가 방문했었던 모든 페이지를 시간순으로 볼 수 있어요! 디버깅에 활용 할 수 있는 뜻밖의 꿀기능이랍니다.!
+
+
+## 👍 속도개선방법 == 원인제거
+지금까지 웹 속도를 느리게하는 다양한 원인을 분석하는 방법을 알아보았습니다.
+
+웹 서비스의 속도를 개선하는 방법은 이러한 속도를 느리게하는 문제를 해결하는데에 있습니다. 지금까지 소개한 내용을 요약해보도록 하겠습니다.
+
+**< 속도를 개선하는 방법 >**
+- 서버에서 에서 브라우저의 Request에 더 빠른 반응을 하도록 하고 더 빠른 Response를 반환하도록 개선 (캐싱 등)
+- 서버에서 반환하는 Response를 빠르게 브라우저에 전달할 수 있도록 Network 구간을 개선 (gzip 등)
+- 웹 페이지의 랜더링을 지연시키는 요소를 제거 (Javascript 튜닝 등)
+- 정적 콘텐츠들을 더 빠르고 안정적으로 호스팅할 수 있는 CDN 서비스 선택
+- 정적 콘텐츠들을 브라우저 스토리지에 캐싱
+- 정적 콘텐츠 요청시 HTTP/2, HTTP/3 등의 상위 프로토콜 사용추천
+
+으로 정리해볼 수 있을것 같습니다.
 
 
 ## 👋 마치며
 오늘은 APM(Application Performance Management)도구 중 front-end 개발자가 사용하면 좋을 도구에 대해 소개해보았습니다.
 
+** 이 멋진 도구는 Javascript 몇줄을 추가하는것만으로 쉽게 사용하실 수 있습니다.! **
+
 이렇게 멋진 소프트웨어를 무료로 사용할 수 있다는 점이 정말 좋은것 같습니다.
 
-> ps) 😎 이 게시물을 회사 대표님이 못보게 하세요!
+> ps) 😎 이 게시물을 회사 대표님이 못보게 하세요.! 
+
+> 궁금하신 내용이나 프로그램 사용 중 막히는 부분이 있다면 언제든지 댓글로 문의하여 주세요.! 댓글은 환영입니다.!
 
 도움을 주신 많은 분들께 감사드립니다.
 
 
 ## 💪 함께 하면 좋을링크
 - [무료로 서비스를 모니터링하는 3가지 방법](https://bit.ly/2ZsPcQn)
-- [제니퍼 프론트 사이트](https://front.jennifersoft.com/)
-- [제니퍼소프트 사이트](https://jennifersoft.com/)
+- <a href="http://asq.kr/zso40e7v2kYo" title="제니퍼 프론트 사이트" alt="제니퍼 프론트 사이트" taget="_blank">제니퍼 프론트 사이트</a>
+- <a href="http://asq.kr/G9j0V1HdZhLL" title="제니퍼소프트 사이트" alt="제니퍼소프트 사이트" taget="_blank">제니퍼소프트 사이트</a>
