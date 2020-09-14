@@ -167,6 +167,24 @@ JENNIFER Front에서는 아래 사진과 같이 정적 컨텐츠들을 url 규�
 ![리소스 그룹](https://images.velog.io/images/dochis/post/3c9236c0-052d-41b3-a784-9ddd917b885c/image.png)
 
 
+### 🙋‍ 당신의 웹 폰트는 안녕하신가요?
+
+여러분들 께서 사용하시는 웹 폰트는 안녕하신가요?
+국내에서 많이 사용하는 NotoSansKR, 나눔고딕 등의 폰트는 사실 매우 무겁습니다.
+
+로딩하고 랜더링하는데에 2초 가량이 소요되죠!
+
+때문에 웹 폰트를 항상 경량화 하고 랜더링을 비동기로 처리하는것이 중요합니다.!
+
+![웹 폰트 분석](https://images.velog.io/images/dochis/post/02bd846e-1413-48cf-a62d-325b0f6b2381/image.png)
+
+웹폰트 최적화와 경량화에 대해 자세히 소개한 게시물을 알려드릴께요!
+- <a href="http://asq.kr/Z8ogGLidcx54" title="웹 폰트 사용과 최적화의 최근 동향 (Naver D2)" alt="웹 폰트 사용과 최적화의 최근 동향 (Naver D2)" target="_blank">웹 폰트 사용과 최적화의 최근 동향 (Naver D2)</a>
+- <a href="http://asq.kr/isQcKCznENYJ" title="웹폰트 경량화" alt="웹폰트 경량화" target="_blank">웹 폰트 경량화 (INDIV.BLOG)</a>
+- <a href="http://asq.kr/C6stESF9ARXS" title="웹폰트 올바른 방법으로 로딩하자" alt="웹폰트 올바른 방법으로 로딩하자" target="_blank">웹폰트 올바른 방법으로 로딩하자 (웹아틀리에)</a>
+
+
+
 # 😳 뜻밖의 꿀팁!
 
 Javascript Error 분석기능도 있습니다.!
