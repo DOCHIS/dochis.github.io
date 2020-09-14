@@ -55,6 +55,7 @@ hists: https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fve
 
 # 😏 와 저 오른쪽 그레프 이쁘다
 ![JENNIFER Front X-View](https://images.velog.io/images/dochis/post/405c6a0b-314f-4e8c-b093-6b504a7e5fcb/image.gif)
+
 ~~손님! 안목이 있으시군요!~~. JENNIFER의 핵심인 x-view 화면입니다.
 그런데 세로축이 페이지 로딩에 소요 된 시간입니다.
 윗쪽을 보시면 5초이상의 노란색~빨간색 표시가 보이시죠??
@@ -70,9 +71,7 @@ JENNIFER에서는 5초 미만의 페이지의 경우 초록색, 5초~10초 구�
 x-view 화면에서 원하시는 영역을 드레그 하시면 페이지가 느린지 알 수 있습니다.
 
 저는 빨간색 영역을 드레그 해보겠습니다.
-![드레그 방법](https://images.velog.io/images/dochis/post/1108f680-b3f5-48ea-9ece-ade4ca0228d0/image.png)
-
-![x-view 상세보기 화면](https://images.velog.io/images/dochis/post/749e3e43-c357-4ca9-9d6f-f5a26cafdff3/image.png)
+![x-view 드레그 방법](https://images.velog.io/images/dochis/post/b000862c-556c-4648-a8b5-53cc3d7396b3/x-view.gif)![x-view 상세보기 화면](https://images.velog.io/images/dochis/post/749e3e43-c357-4ca9-9d6f-f5a26cafdff3/image.png)
 
 JENNIFER Front에서 사용하는 추적옵션은 다음과 같은 6종류입니다.
 - 대기 : 
