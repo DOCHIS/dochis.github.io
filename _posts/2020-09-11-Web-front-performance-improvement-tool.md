@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 웹 프론트 속도 개선을 위한 필수도구 소개 (무료)
+title: 웹 프론트 속도 개선을 위한 필수도구 소개
 description: "왜 우리사이트만 느린가? 쉽게 파악하는 방법"
 image: "https://media.vlpt.us/images/dochis/post/16986537-cf95-48c6-ada7-3f8857f97c45/GregariousGenuineKoalabear-size_restricted.gif"
 tags: apm front-end monitoring 성능개선
@@ -53,7 +53,7 @@ hists: https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fve
 ![JENNIFER Front 대시보드](https://images.velog.io/images/dochis/post/4e1bba42-3e74-48b0-b058-0f0e6af08869/dashboard.gif)
 
 
-# 😏 와 저 오른쪽 그레프 이쁘다
+# 😏 와 저 그레프 이쁘다
 ![JENNIFER Front X-View](https://images.velog.io/images/dochis/post/405c6a0b-314f-4e8c-b093-6b504a7e5fcb/image.gif)
 
 ~~손님! 안목이 있으시군요!~~. JENNIFER의 핵심인 x-view 화면입니다.
@@ -167,7 +167,7 @@ JENNIFER Front에서는 아래 사진과 같이 정적 컨텐츠들을 url 규�
 ![리소스 그룹](https://images.velog.io/images/dochis/post/3c9236c0-052d-41b3-a784-9ddd917b885c/image.png)
 
 
-## 😳 뜻밖의 꿀팁!
+# 😳 뜻밖의 꿀팁!
 
 Javascript Error 분석기능도 있습니다.!
 Javascript Error가 발생할 경우 수집하여 브라우저 정보 등과 함께 제공합니다.!
@@ -183,7 +183,7 @@ Javascript Error가 발생할 경우 수집하여 브라우저 정보 등과 함
 > 사용자별 통계 기능은 해당 사용자가 방문했었던 모든 페이지를 시간순으로 볼 수 있어요! 디버깅에 활용 할 수 있는 뜻밖의 꿀기능이랍니다.!
 
 
-## 👍 속도개선방법 == 원인제거
+# 👍 속도개선 == 원인제거
 지금까지 웹 속도를 느리게하는 다양한 원인을 분석하는 방법을 알아보았습니다.
 
 웹 서비스의 속도를 개선하는 방법은 이러한 속도를 느리게하는 문제를 해결하는데에 있습니다. 지금까지 소개한 내용을 요약해보도록 하겠습니다.
@@ -199,7 +199,7 @@ Javascript Error가 발생할 경우 수집하여 브라우저 정보 등과 함
 으로 정리해볼 수 있을것 같습니다.
 
 
-## 👋 마치며
+# 👋 마치며
 오늘은 APM(Application Performance Management)도구 중 front-end 개발자가 사용하면 좋을 도구에 대해 소개해보았습니다.
 
 ** 이 멋진 도구는 Javascript 몇줄을 추가하는것만으로 쉽게 사용하실 수 있습니다.! **
@@ -213,7 +213,7 @@ Javascript Error가 발생할 경우 수집하여 브라우저 정보 등과 함
 도움을 주신 많은 분들께 감사드립니다.
 
 
-## 💪 함께 하면 좋을링크
+# 💪 함께 하면 좋을링크
 - [무료로 서비스를 모니터링하는 3가지 방법](https://bit.ly/2ZsPcQn)
 - <a href="http://asq.kr/zso40e7v2kYo" title="제니퍼 프론트 사이트" alt="제니퍼 프론트 사이트" taget="_blank">제니퍼 프론트 사이트</a>
 - <a href="http://asq.kr/G9j0V1HdZhLL" title="제니퍼소프트 사이트" alt="제니퍼소프트 사이트" taget="_blank">제니퍼소프트 사이트</a>
