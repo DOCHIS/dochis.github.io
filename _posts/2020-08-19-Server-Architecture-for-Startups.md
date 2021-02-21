@@ -7,29 +7,27 @@ tags: AWS 서버 스타트업 SA
 article_header:
   type: overlay
   theme: dark
-  background_color: '#203028'
+  background_color: "#203028"
   background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    gradient: "linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))"
     src: /assets/attachments/2020-08-19-Server-Architecture-for-Startups/cover.png
 comments: true
 ---
 
-
 스타트업을 하다보니 주변 초기 스타트업으로 부터 초기 서버 구축에 대한 질문을 많이 받습니다. 그 중 대표적인 질문이 '클라우드 도입이 필수인가?', '클라우드 비용은 얼마나 나오는가?' 입니다. 오늘은 이 주제에 대해 제 경험을 바탕으로 이용자수를 기준으로 풀어보고자합니다.
 
-
-
 # 시작하기 전에
+
 - 이 게시물은 초기 스타트업 근무경험이 있는 필자의 개인 견해의 의해 작성되었습니다.
-- 게시물 내의 자료는 AWS 이창수 SA님의 게시물 ['천만 사용자를 위한 AWS 클라우드 아키텍쳐'](https://www.slideshare.net/awskorea/aws-cloud-architecture-evolution-for-one-thousand-users-changsu-lee){:target="_blank"}를 일부 인용하였습니다.
+- 게시물 내의 자료는 AWS 이창수 SA님의 게시물 ['천만 사용자를 위한 AWS 클라우드 아키텍쳐'](https://www.slideshare.net/awskorea/aws-cloud-architecture-evolution-for-one-thousand-users-changsu-lee){:target="\_blank"}를 일부 인용하였습니다.
 - **스타트업을 위한?**
   - 이 게시물은 빠르게 성장하는 서비스의 특성을 바탕으로 한 가이드입니다.
   - 빠르게 성장하지 않는 서비스라면 전통적인 방식의 서버 호스팅이 더 적합할 수 있습니다.
 
-
-
 # 클라우드 선택은 필수인가요?
+
 **" 초기 스타트업에게는 비추천 / 성장하는 서비스에게는 필수! "**
+
 - 아래 내용은 필자의 개인 의견입니다.
 - 사실 클라우드 서비스는 싸지 않습니다.
   - 사용량에 따라 과금되지만 사용량에 따른 비용이 기존 전통적인 방식에 비해 비쌉니다.
@@ -37,24 +35,22 @@ comments: true
 - 이러한 과정에서 많은 인력이 필요하기 때문에 초기스타트업에게 적합하지 않습니다.
 - 서비스가 성장하고 있을 때 클라우드의 도입을 검토해볼 수 있습니다. 빠르게 성장하는 속도에 따라 발생되는 방대한 량의 트레픽을 유동적으로 처리하기 위해서는 사실 클라우드 이외에는 방법이 없습니다.
 
-
-
-
 # 서버선택 가이드
 
 ## 서비스 개발 이전 ~ 월 사용자 1천명 미만
+
 서비스가 개발되지 않았거나 서비스를 오픈했지만 월 사용자가 1천명 이하일 때 추천합니다.  
 초기 스타트업은 인력이 항상 부족합니다. 서버에 많은 신경을 쓰지 않는것을 추천합니다.
-  
-**초기 개발언어 선택이 중요합니다.**  
 
-**< 추천구성 >**  
+**초기 개발언어 선택이 중요합니다.**
+
+**< 추천구성 >**
+
 - 사용언어 : PHP / JSP / ASP / node.js
   - cafe24와 같은 호스팅을 선택하여 개발에 집중하는것을 추천
   - 개발용이라면 월 500원 ~ 5,500원 이내로도 충분한 개발이 가능
   - 1천명 사용자까지 월 500원 ~ 22,000원 정도로 운용 가능
   - 사용자가 많아질경우 호스팅의 성능을 높여 대응(절약형>일반형>비즈니스 등)
-  
 - 그 이외의 언어 : Python / Ruby / Go / C# 등
   - 아쉽게도 이 언어를 지원하는 호스팅은 많지 않음.
   - 초기부터 서버를 구성하여 서비스를 구성하는것을 추천.
@@ -64,30 +60,31 @@ comments: true
   - 언어에 따라 다르지만 AWS의 경우 대부분 프리티어로 대응 가능
     - AWS에서는 EC2 t2.micro 서버를 가입 후 1년동안 무상으로 이용가능 ≒ 월 약13,000원 정도
     - 단, 서버비용을 제외한 네트워크 비용은 발생할 수 있음 (사고만 치지 않는다면 저렴하게 이용가능)
-    - [프리티어에 대한 자세한 설명 링크(새창)](https://aws.amazon.com/ko/free/){:target="_blank"}
+    - [프리티어에 대한 자세한 설명 링크(새창)](https://aws.amazon.com/ko/free/){:target="\_blank"}
     - 1천명 사용자까지 프리티어를 활용하여 월 약4천원 미만의 비용 예상
     - 사용자가 늘어나면 EC2의 타입을 높여 대응 (프리티어 사용불가)
   - 추천 구성  
     ![초기 서비스 구성](/assets/attachments/2020-08-19-Server-Architecture-for-Startups/user_1_over.jpg)
 
-* * *
-
+---
 
 ## 월 사용자 1천명 이상
-- 꼭 1천명 이상이 아니더라도, 사용자가 조금 많아져 서비스가 느려지는 경우입니다.  
-  
-**< 호스팅의 경우 >**  
+
+- 꼭 1천명 이상이 아니더라도, 사용자가 조금 많아져 서비스가 느려지는 경우입니다.
+
+**< 호스팅의 경우 >**
+
 - 호스팅의 경우 대부분 고사양의 서버를 공유해 사용하므로 아직 성능의 문제가 생기지 않을 수 있습니다.
 - 호스팅 -> 클라우드로 갈아타는 조건
   - 호스팅에서 제공하는 트레픽용량/하드용량/DB겟수가 부족한 경우
   - 정부의 클라우드 지원사업을 통해 서버비를 지원받을 수 있게 된 경우
 - 위와 같은 경우가 아니라면, 기존 호스팅 서비스를 업그레이드하여 사용하는게 좋습니다.
 
-**< 초기부터 1대의 서버로 시작한 경우 >**  
+**< 초기부터 1대의 서버로 시작한 경우 >**
+
 - EC2 서버와 DB서버를 분리하는것을 추천합니다.
 - 서버인력이 없다면 약간의 노가다와 삽질을 통해 EC2위에 DB를 올려 조금 저렴하게 이용할수도 있지만 AWS의 Serverless 아키텍쳐인 RDS 서비스를 통해 조금 비싸더라도 DB를 분리하는것을 추천합니다.
 - RDS를 추천하는 이유는 서버관리 인력을 줄여 서비스 개발에 집중하기 위해서입니다.
-  
 - 예상구성  
   ![1천명 사용자를 위한 서버 구성](/assets/attachments/2020-08-19-Server-Architecture-for-Startups/user_1000_over.jpg)
 
@@ -95,15 +92,14 @@ comments: true
   - AWS 가입 후 1년이 경과되지 않았다면 일부 서비스를 1년간 프리티어로 이용하실 수 있습니다.
   - 스토리지 등은 가입일 관계없이 프리티어 적용이 가능한 부분이 일부 있습니다.
 
-| 구분 | 인스턴스 타입/내용      | 비용(월)    | 비고                |
-|------|-------------------------|---------|---------------------|
-| RDS  | 단일 AZ db.t2.micro     | 0       | 1년간 프리티어 적용 |
-| RDS  | DB 스토리지 20GB        | 0       | 프리티어            |
-| RDS  | DB 백업용 스토리지 20GB | 0       | 프리티어            |
-| EC2  | t2.micro                | 0       | 1년간 프리티어 적용 |
-| EBS  | EC2용 스토리지 30GB     | 0       | 프리티어            |
-| 기타 | 네트워크 통신 비용 등   | 4,000원 | 1년간 일부 프리티어 적용 |
-
+| 구분 | 인스턴스 타입/내용      | 비용(월) | 비고                     |
+| ---- | ----------------------- | -------- | ------------------------ |
+| RDS  | 단일 AZ db.t2.micro     | 0        | 1년간 프리티어 적용      |
+| RDS  | DB 스토리지 20GB        | 0        | 프리티어                 |
+| RDS  | DB 백업용 스토리지 20GB | 0        | 프리티어                 |
+| EC2  | t2.micro                | 0        | 1년간 프리티어 적용      |
+| EBS  | EC2용 스토리지 30GB     | 0        | 프리티어                 |
+| 기타 | 네트워크 통신 비용 등   | 4,000원  | 1년간 일부 프리티어 적용 |
 
 - 예상비용 (가입일로 부터 1년 이후)
   - 1달러 환율을 1,200원, 한달을 730시간으로 계산하였을 때 예상비용입니다.
@@ -111,7 +107,7 @@ comments: true
   - 프리티어가 적용되지 않는다면 인스턴스는 t2가 아닌, t3세대를 사용하는것을 추천합니다.
 
 | 구분 | 인스턴스 타입/내용      | 비용(월) | 비고            |
-|------|-------------------------|----------|-----------------|
+| ---- | ----------------------- | -------- | --------------- |
 | RDS  | 단일 AZ db.t3.micro     | 22,776원 |                 |
 | RDS  | DB 스토리지 20GB        | 0        | 프리티어        |
 | RDS  | DB 백업용 스토리지 20GB | 0        | 프리티어        |
@@ -121,22 +117,22 @@ comments: true
 
 - 위와 같이 구성하였을 때도 부하가 걸린다면 부하의 원인이 DB인지 EC2 인스턴스인지를 찾아 t3계열내에서 스케일 업(사양을 높이는) 형태로 운영을 추천합니다.
 
-
-* * *
+---
 
 ## 월 사용자 1만명 이상
+
 - 사용자가 월 1만명이 넘어가기 시작하면 서비스가 안정적으로 돌아가기 위한 구성이 필요합니다. 또 안정적인 시스템을 구성하려면 비용이 소요됩니다.
 - 사용자가 꼭 1만명 이상이 아닌 5천명이라 할지라도 만약에 발생할지 모르는 장애에 유연하게 대처하기 위해 서버 2중화 구성을 도입하게 됩니다.
 - 사용자가 많아짐에 따라 서버 사양도 기존 micro에서 small 급 이상으로 올릴 필요가 있습니다.
 - 예상구성
   - ELB를 이용해 EC2 인스턴스를 2원화
   - RDS의 멀티 AZ 기능을 통해 DB를 2원화  
-  ![1만명 사용자를 위한 서버 구성](/assets/attachments/2020-08-19-Server-Architecture-for-Startups/user_10000_over.jpg)  
-  .
-- 에상비용 (가입일로 부터 1년 이후)  
-  
+    ![1만명 사용자를 위한 서버 구성](/assets/attachments/2020-08-19-Server-Architecture-for-Startups/user_10000_over.jpg)  
+    .
+- 예상비용 (가입일로 부터 1년 이후)
+
 | 구분 | 인스턴스 타입/내용        | 단가 (월) | 수량 | 단가x갯수(월) | 비고            |
-|------|---------------------------|-----------|------|---------------|-----------------|
+| ---- | ------------------------- | --------- | ---- | ------------- | --------------- |
 | RDS  | 멀티 AZ db.t3.medium      | -         | 1SET | 182,208원     |                 |
 | RDS  | DB 스토리지 20GB          | 0         | 1EA  | 0             | 프리티어        |
 | RDS  | DB 백업용 스토리지 20GB   | 0         | 1EA  | 0             | 프리티어        |
@@ -144,44 +140,41 @@ comments: true
 | EBS  | EC2용 스토리지 30GB       | 0         | 1EA  | 0             | 프리티어        |
 | ELB  | Application Load Balancer | 26,718원  | 1LCU | 26,718원      |                 |
 | 기타 | 네트워크 통신 비용 등     | -         |      | 20,000원      | 대략적인 비용임 |
+| 합계 |                           |           |      | 274,478원     |                 |
 
-  - 기존 4만원도 안하던 서버비용이 갑자기 7배 가까이 오르게 됩니다.
-  - 이렇게 구성함에 따라 특정 하나의 서버 또는 AZ에 장애가 발생되더라도 대응할 수 있는 안정성을 확보하게 됩니다.
-  
+- 기존 4만원도 안하던 서버비용이 갑자기 7배 가까이 오르게 됩니다.
+- 이렇게 구성함에 따라 특정 하나의 서버 또는 AZ에 장애가 발생되더라도 대응할 수 있는 안정성을 확보하게 됩니다.
 
-* * *
+---
 
 ## 이후에는 어떤가요?
+
 - 1천명에서 1만명으로 넘어갈 때 안정성 확보를 위해 비용이 7배나 오르는것을 보셨을겁니다.
 - 사용자가 더 늘어나게 되면 서비스에 부하가 발생하게 되고 해당 부하를 분산하기 위해 기존 2대였던 EC2를 더 늘릴 필요가 있고 또 일부 정적파일(CSS/JS/이미지 등)은 S3와 CDN 서비스를 통해 분산하실 필요가 생기게 됩니다.
-- 또 여러분들의 서비스 내의 각종 로그를 수집하여 AI 연산을 수행해야 할 수 있고 더 빠른 DB의 필요성으로 인해 Redis와 몽고 DB 등의 필요성이 생길 수 있습니다.  
+- 또 여러분들의 서비스 내의 각종 로그를 수집하여 AI 연산을 수행해야 할 수 있고 더 빠른 DB의 필요성으로 인해 Redis와 몽고 DB 등의 필요성이 생길 수 있습니다.
 - 중요한것은 이 모든 서비스의 사용이 비용으로 계산된다는 점으로, 비용을 줄이기 위해서는 최적화와 성능개선을 통해 사용량을 줄일 필요가 있습니다.
 - 여기서 2가지 선택점이 생기게 됩니다.
   - 서버비용을 감당하고 최적화를 하지 않고 개발인력을 아껴 집중할지
   - 개발인력이 소모되더라도 서버를 최적화하여 서버비용을 줄일지
-- ['천만 사용자를 위한 AWS 클라우드 아키텍쳐'](https://www.slideshare.net/awskorea/aws-cloud-architecture-evolution-for-one-thousand-users-changsu-lee){:target="_blank"} 게시물은 AWS 서비스 전반을 이해하는데에 큰 도움이 됩니다. AWS 서비스를 처음 접하신다면 꼭 읽어보시기를 추천드립니다.
+- ['천만 사용자를 위한 AWS 클라우드 아키텍쳐'](https://www.slideshare.net/awskorea/aws-cloud-architecture-evolution-for-one-thousand-users-changsu-lee){:target="\_blank"} 게시물은 AWS 서비스 전반을 이해하는데에 큰 도움이 됩니다. AWS 서비스를 처음 접하신다면 꼭 읽어보시기를 추천드립니다.
 
-
-* * *
+---
 
 ## 맺음말
+
 - 이 게시물이 많은 분들께 도움이 되길 바랍니다.
 - 오류나 수정되어야 할 사항이 있다면 언제든지 피드백 부탁드립니다.
 
-
-* * *
+---
 
 ## 참조링크
-- [천만 사용자를 위한 AWS 클라우드 아키텍쳐](https://www.slideshare.net/awskorea/aws-cloud-architecture-evolution-for-one-thousand-users-changsu-lee){:target="_blank"}
-- [Cafe24 호스팅 요금 (PHP)](https://www.cafe24.com/?controller=product_page&type=basic&page=autoban){:target="_blank"}
-- [Cafe24 호스팅 요금 (JSP)](https://www.cafe24.com/?controller=product_page&type=special&page=tomcat){:target="_blank"}
-- [Cafe24 호스팅 요금 (Node.js)](https://www.cafe24.com/?controller=product_page&type=special&page=nodejs){:target="_blank"}
-- [Amazon EC2 요금](https://aws.amazon.com/ko/ec2/pricing/){:target="_blank"}
-- [Amazon RDS 요금](https://aws.amazon.com/ko/rds/pricing/){:target="_blank"}
-- [Elastic Load Balancing 요금](https://aws.amazon.com/ko/elasticloadbalancing/pricing/){:target="_blank"}
-- [AWS 총 소유 비용(TCO) 계산기](https://aws.amazon.com/ko/tco-calculator/){:target="_blank"}
-- [AWS 프리티어 소개페이지](https://aws.amazon.com/ko/free/){:target="_blank"}
 
-
-
-
+- [천만 사용자를 위한 AWS 클라우드 아키텍쳐](https://www.slideshare.net/awskorea/aws-cloud-architecture-evolution-for-one-thousand-users-changsu-lee){:target="\_blank"}
+- [Cafe24 호스팅 요금 (PHP)](https://www.cafe24.com/?controller=product_page&type=basic&page=autoban){:target="\_blank"}
+- [Cafe24 호스팅 요금 (JSP)](https://www.cafe24.com/?controller=product_page&type=special&page=tomcat){:target="\_blank"}
+- [Cafe24 호스팅 요금 (Node.js)](https://www.cafe24.com/?controller=product_page&type=special&page=nodejs){:target="\_blank"}
+- [Amazon EC2 요금](https://aws.amazon.com/ko/ec2/pricing/){:target="\_blank"}
+- [Amazon RDS 요금](https://aws.amazon.com/ko/rds/pricing/){:target="\_blank"}
+- [Elastic Load Balancing 요금](https://aws.amazon.com/ko/elasticloadbalancing/pricing/){:target="\_blank"}
+- [AWS 총 소유 비용(TCO) 계산기](https://aws.amazon.com/ko/tco-calculator/){:target="\_blank"}
+- [AWS 프리티어 소개페이지](https://aws.amazon.com/ko/free/){:target="\_blank"}
