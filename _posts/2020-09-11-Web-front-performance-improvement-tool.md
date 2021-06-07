@@ -39,13 +39,13 @@ hists: https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fve
 필자의 경우 2.7초를 초과 할 경우 느리다고 생각하고 있습니다.
 많은 보고서에서 로딩이 3초를 초과할 경우
 50% 정도의 사용자는 사이트를 이탈한다고 말합니다.!
-<a href="http://asq.kr/azlSZD8khUrZ" target="_blank"><br>그 보고서 자세히 보고싶어요! (akamai 보고서)</a>
+<a href="https://bit.ly/32o2pfe" target="_blank"><br>그 보고서 자세히 보고싶어요! (akamai 보고서)</a>
 
 # 😶 오늘 사용할 도구
 오늘 소개할 도구는 JENNIFERSOFT사의 JENNIFER Front입니다.
 현재 구글 계정만 있다면 **무료**로 사용하실 수 있습니다.
 
-<a href="http://asq.kr/zso40e7v2kYo" title="JENNIFER Front 바로가기" alt="JENNIFER Front 바로가기" taget="_blank">JENNIFER Front 바로가기</a>
+<a href="https://bit.ly/2TLUiaG" title="JENNIFER Front 바로가기" alt="JENNIFER Front 바로가기" taget="_blank">JENNIFER Front 바로가기</a>
 
 > JENNIFERSOFT사 소속의 Irene님께서
 '유료 계획은 현재까지는 없습니다~' 라고 답변해주셨습니다.
@@ -180,9 +180,9 @@ JENNIFER Front에서는 아래 사진과 같이 정적 컨텐츠들을 url 규�
 ![웹 폰트 분석](https://images.velog.io/images/dochis/post/02bd846e-1413-48cf-a62d-325b0f6b2381/image.png)
 
 웹폰트 최적화와 경량화에 대해 자세히 소개한 게시물을 알려드릴게요!
-- <a href="http://asq.kr/Z8ogGLidcx54" title="웹 폰트 사용과 최적화의 최근 동향 (Naver D2)" alt="웹 폰트 사용과 최적화의 최근 동향 (Naver D2)" target="_blank">웹 폰트 사용과 최적화의 최근 동향 (Naver D2)</a>
-- <a href="http://asq.kr/isQcKCznENYJ" title="웹폰트 경량화" alt="웹폰트 경량화" target="_blank">웹 폰트 경량화 (INDIV.BLOG)</a>
-- <a href="http://asq.kr/C6stESF9ARXS" title="웹폰트 올바른 방법으로 로딩하자" alt="웹폰트 올바른 방법으로 로딩하자" target="_blank">웹폰트 올바른 방법으로 로딩하자 (웹아틀리에)</a>
+- <a href="https://bit.ly/3zakfkv" title="웹 폰트 사용과 최적화의 최근 동향 (Naver D2)" alt="웹 폰트 사용과 최적화의 최근 동향 (Naver D2)" target="_blank">웹 폰트 사용과 최적화의 최근 동향 (Naver D2)</a>
+- <a href="https://bit.ly/3co3KqZ" title="웹폰트 경량화" alt="웹폰트 경량화" target="_blank">웹 폰트 경량화 (44bits)</a>
+- <a href="https://bit.ly/3ghTUbh" title="웹폰트 올바른 방법으로 로딩하자" alt="웹폰트 올바른 방법으로 로딩하자" target="_blank">웹폰트 올바른 방법으로 로딩하자 (웹아틀리에)</a>
 
 
 
@@ -234,5 +234,5 @@ Javascript Error가 발생할 경우 수집하여 브라우저 정보 등과 함
 
 # 💪 함께 하면 좋을 링크
 - [무료로 서비스를 모니터링하는 3가지 방법](https://bit.ly/2ZsPcQn)
-- <a href="http://asq.kr/zso40e7v2kYo" title="제니퍼 프론트 사이트" alt="제니퍼 프론트 사이트" taget="_blank">제니퍼 프론트 사이트</a>
-- <a href="http://asq.kr/G9j0V1HdZhLL" title="제니퍼소프트 사이트" alt="제니퍼소프트 사이트" taget="_blank">제니퍼소프트 사이트</a>
+- <a href="https://bit.ly/2TLUiaG" title="제니퍼 프론트 사이트" alt="제니퍼 프론트 사이트" taget="_blank">제니퍼 프론트 사이트</a>
+- <a href="https://bit.ly/2RtuOhl" title="제니퍼소프트 사이트" alt="제니퍼소프트 사이트" taget="_blank">제니퍼소프트 사이트</a>
